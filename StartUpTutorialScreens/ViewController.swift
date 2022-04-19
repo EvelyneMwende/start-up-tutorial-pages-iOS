@@ -39,6 +39,14 @@ class ViewController: UIViewController, UIPageViewControllerDataSource {
 
     @IBAction func skipButtonTapped(_ sender: Any) {
         
+        //NOT SHOWING TUTORIAL ON STARTUP
+        //remembering user's choice to skip tutorial
+        let defaults = UserDefaults.standard
+        defaults.setValue(true, forKey: "skipTutorialPages")
+        defaults.synchronize()
+        
+        
+        
         let nextView = self.storyboard?.instantiateViewController(withIdentifier: "TheNextViewController") as! TheNextViewController
         
         let appDelegate = UIApplication.shared.delegate

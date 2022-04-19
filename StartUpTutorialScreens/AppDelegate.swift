@@ -15,8 +15,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        UIPageControl.appearance().pageIndicatorTintColor = UIColor.lightGray
-        UIPageControl.appearance().currentPageIndicatorTintColor = UIColor.blue
+        //NOT SHOWING TUTORIAL ON STARTUP
+        //remembering user's choice to skip tutorial
+        let defaults = UserDefaults.standard
+        let skipTutorialPages = defaults.bool(forKey: "skipTutorialPages")
+        print(skipTutorialPages)
+        
+        if skipTutorialPages{
+            
+            let mainStoryoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            
+            let nextView = mainStoryoard.instantiateViewController(withIdentifier: "TheNextViewController") as! TheNextViewController
+            
+            let appDelegate = UIApplication.shared.delegate
+            appDelegate?.window??.rootViewController = nextView
+            
+            //window?.rootViewController = nextView
+            UIApplication.shared.windows.first?.rootViewController = nextView
+            
+            UIApplication.shared.windows.first?.makeKeyAndVisible()
+            
+            
+        }
+        else{
+            UIPageControl.appearance().pageIndicatorTintColor = UIColor.lightGray
+            UIPageControl.appearance().currentPageIndicatorTintColor = UIColor.blue
+        }
+        
+        //setting color for the dots for the page controller
+//        UIPageControl.appearance().pageIndicatorTintColor = UIColor.lightGray
+//        UIPageControl.appearance().currentPageIndicatorTintColor = UIColor.blue
+        
+        
         return true
     }
 
