@@ -29,10 +29,34 @@ class ViewController: UIViewController, UIPageViewControllerDataSource {
         
         self.pageViewController.view.frame = CGRect(x: 0, y: 100, width: self.view.frame.size.width, height: self.view.frame.size.height-100)
         
-        self.addChild(self.pageViewController)
-        self.view.addSubview(self.pageViewController.view)
+        //NOT SHOWING TUTORIAL ON STARTUP
+        //remembering user's choice to skip tutorial
+        let defaults = UserDefaults.standard
+        let skipTutorialPages = defaults.bool(forKey: "skipTutorialPages")
+        print(skipTutorialPages)
         
-        self.pageViewController.didMove(toParent: self)
+        if skipTutorialPages{
+            let nextView = self.storyboard?.instantiateViewController(withIdentifier: "TheNextViewController") as! TheNextViewController
+            
+            let appDelegate = UIApplication.shared.delegate
+            appDelegate?.window??.rootViewController = nextView
+            
+            UIApplication.shared.windows.first?.rootViewController = nextView
+            
+            UIApplication.shared.windows.first?.makeKeyAndVisible()
+            
+            
+        }else{
+            self.addChild(self.pageViewController)
+            self.view.addSubview(self.pageViewController.view)
+            
+            self.pageViewController.didMove(toParent: self)
+            UIPageControl.appearance().pageIndicatorTintColor = UIColor.lightGray
+            UIPageControl.appearance().currentPageIndicatorTintColor = UIColor.blue
+        }
+        
+        
+        
         
         
     }
