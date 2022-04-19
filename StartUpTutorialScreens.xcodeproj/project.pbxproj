@@ -13,6 +13,8 @@
 		6CDB9534280E88FA00C5F088 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CDB9532280E88FA00C5F088 /* Main.storyboard */; };
 		6CDB9536280E88FC00C5F088 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CDB9535280E88FC00C5F088 /* Assets.xcassets */; };
 		6CDB9539280E88FD00C5F088 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CDB9537280E88FD00C5F088 /* LaunchScreen.storyboard */; };
+		6CDB9541280E8A3700C5F088 /* TheNextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDB9540280E8A3700C5F088 /* TheNextViewController.swift */; };
+		6CDB9543280E8E2000C5F088 /* TutorialPageContentHolderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDB9542280E8E2000C5F088 /* TutorialPageContentHolderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		6CDB9535280E88FC00C5F088 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6CDB9538280E88FD00C5F088 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6CDB953A280E88FD00C5F088 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6CDB9540280E8A3700C5F088 /* TheNextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheNextViewController.swift; sourceTree = "<group>"; };
+		6CDB9542280E8E2000C5F088 /* TutorialPageContentHolderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialPageContentHolderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				6CDB9535280E88FC00C5F088 /* Assets.xcassets */,
 				6CDB9537280E88FD00C5F088 /* LaunchScreen.storyboard */,
 				6CDB953A280E88FD00C5F088 /* Info.plist */,
+				6CDB9540280E8A3700C5F088 /* TheNextViewController.swift */,
+				6CDB9542280E8E2000C5F088 /* TutorialPageContentHolderViewController.swift */,
 			);
 			path = StartUpTutorialScreens;
 			sourceTree = "<group>";
@@ -139,8 +145,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6CDB9531280E88FA00C5F088 /* ViewController.swift in Sources */,
+				6CDB9541280E8A3700C5F088 /* TheNextViewController.swift in Sources */,
 				6CDB952D280E88FA00C5F088 /* AppDelegate.swift in Sources */,
 				6CDB952F280E88FA00C5F088 /* SceneDelegate.swift in Sources */,
+				6CDB9543280E8E2000C5F088 /* TutorialPageContentHolderViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
